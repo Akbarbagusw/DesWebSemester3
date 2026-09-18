@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Tambah Anggota</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../buku/list.html">Daftar Buku</a></li>
+                <li><a href="../buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="list.html">Daftar Anggota</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <span>(Wajib Diisi)</span>
+            <h2>Tambah Anggota</h2>
+            <form method="POST" action="">
+                <p>
+                    <label for="nama">Nama</label><br>
+                    <input type="text" id="nama" name="nama_lengkap" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" required>
+                </p>
+                <p>
+                    <label for="no_anggota">No. Anggota</label><br>
+                    <input type="text" id="no_anggota" name="no_anggota" required>
+                </p>
+                <p>
+                    <label for="tanggal_lahir">Tanggal Lahir</label><br>
+                    <input type="datetime-local" value="dd/mm/yyyy hh:mm:ss" id="tanggal_lahir" name="tanggal_lahir" required>
+                </p>
+                <p>
+                    <label for="alamat">Alamat</label><br>
+                    <textarea id="alamat" rows="10" cols="30" name="alamat" required></textarea>
+                    <input type="text" id="alamat" name="alamat">
+                </p>
+                <p>
+                    <label for="no_hp">No. HP</label><br>
+                    <input type="number" id="no_hp" name="no_hp" required>
+                </p>
+                <p>
+                    <button type="submit">Simpan</button>
+                </p>
+            </form>
+        </section>
+    </main>
+</body>
+
+<footer>
+    <p>&copy; 2026 SIMPUS-Mini &mdash; JobSheet</p>
+</footer>
+</html>
