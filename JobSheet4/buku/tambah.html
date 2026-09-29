@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Tambah Buku</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Buku</a></li>
+                <li><a href="tambah.html">Tambah Buku</a></li>
+                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Tambah Buku Baru</h2>
+            <form>
+                <p>
+                    <label for="judul">Judul Buku <span style="color: red;">*</span></label>
+                    <input type="text" id="judul" name="judul" required placeholder="Contoh: Laskar Pelangi">
+                </p>
+                <p>
+                    <label for="pengarang">Pengarang <span style="color: red;">*</span></label>
+                    <input type="text" id="pengarang" name="pengarang" required placeholder="Contoh: Andrea Hirata">
+                </p>
+                <p>
+                    <label for="tahun">Tahun Terbit</label>
+                    <input type="number" id="tahun" name="tahun" min="1900" max="2026" value="2024">
+                </p>
+                <p>
+                    <label for="isbn">ISBN</label>
+                    <input type="text" id="isbn" name="isbn" placeholder="978-xxx-xxx-xxx-x">
+                </p>
+                <p>
+                    <label for="stok">Jumlah Stok <span style="color: red;">*</span></label>
+                    <input type="number" id="stok" name="stok" min="0" value="1" required>
+                </p>
+                <p>
+                    <label for="kategori">Kategori</label>
+                    <select id="kategori" name="kategori">
+                        <option value="fiksi">Fiksi</option>
+                        <option value="non-fiksi">Non-Fiksi</option>
+                        <option value="referensi">Referensi</option>
+                        <option value="komputer">Teknologi &amp; Komputer</option>
+                    </select>
+                </p>
+                <p>
+                    <button type="submit">Simpan Buku</button>
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 4 (UI/UX Design)</p>
+    </footer>
+</body>
+</html>

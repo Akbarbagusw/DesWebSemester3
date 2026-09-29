@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Login Petugas</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku/list.html">Daftar Buku</a></li>
+                <li><a href="buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-wrapper">
+            <section class="auth-card">
+                <div class="auth-header">
+                    <h2>Login Petugas</h2>
+                    <p>Silakan masukkan kredensial untuk mengakses modul transaksi &amp; data perpustakaan.</p>
+                </div>
+                <form action="index.html" method="GET">
+                    <p>
+                        <label for="username">Username :</label>
+                        <input type="text" id="username" name="username" placeholder="Masukkan username petugas" required autofocus>
+                    </p>
+
+                    <p>
+                        <label for="password">Password :</label>
+                        <input type="password" id="password" name="password" placeholder="Masukkan password" required>
+                    </p>
+
+                    <p style="margin-top: 1.25rem;">
+                        <button type="submit">[ Masuk ]</button>
+                    </p>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Belum punya akun? <a href="registrasi.html">Daftar di sini</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        <a href="index.html">&larr; Kembali ke Beranda Tamu</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 4 (UI/UX Design - Latihan 4)</p>
+    </footer>
+</body>
+</html>

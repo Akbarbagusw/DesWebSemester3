@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Daftar Anggota</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="../buku/list.html">Daftar Buku</a></li>
+                <li><a href="../buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="list.html">Daftar Anggota</a></li>
+                <li><a href="tambah.html">Tambah Anggota</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Daftar Anggota</h2>
+            <div class="table-responsive">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th rowspan="2">No. Anggota</th>
+                            <th rowspan="2">Nama</th>
+                            <th rowspan="2">Alamat</th>
+                            <th rowspan="2">No. HP</th>
+                            <th colspan="2">Jenis Kelamin</th>
+                            <th rowspan="2">Status</th>
+                            <th colspan="2">Aksi</th>
+                        </tr>
+                        <tr>
+                            <th>Laki-laki</th>
+                            <th>Perempuan</th>
+                            <th>Edit</th>
+                            <th>Hapus</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>A001</td>
+                            <td>Siti Aminah</td>
+                            <td>Malang</td>
+                            <td>081234567890</td>
+                            <td></td>
+                            <td>✔</td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td><button type="button" class="btn-edit">Edit</button></td>
+                            <td><button type="button" class="btn-hapus">Hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td>A002</td>
+                            <td>Budi Santoso</td>
+                            <td>Batu</td>
+                            <td>082345678901</td>
+                            <td>✔</td>
+                            <td></td>
+                            <td><span class="badge badge-success">Aktif</span></td>
+                            <td><button type="button" class="btn-edit">Edit</button></td>
+                            <td><button type="button" class="btn-hapus">Hapus</button></td>
+                        </tr>
+                        <tr>
+                            <td>A003</td>
+                            <td>Dewi Lestari</td>
+                            <td>Surabaya</td>
+                            <td>083456789012</td>
+                            <td></td>
+                            <td>✔</td>
+                            <td><span class="badge badge-warning">Tunggakan</span></td>
+                            <td><button type="button" class="btn-edit">Edit</button></td>
+                            <td><button type="button" class="btn-hapus">Hapus</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 4 (UI/UX Design)</p>
+    </footer>
+</body>
+</html>
