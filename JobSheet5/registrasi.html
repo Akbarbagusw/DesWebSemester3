@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Registrasi Anggota Baru</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="buku/list.html">Daftar Buku</a></li>
+                <li><a href="buku/tambah.html">Tambah Buku</a></li>
+                <li><a href="anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="anggota/tambah.html">Tambah Anggota</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="auth-wrapper" style="max-width: 580px;">
+            <section class="auth-card">
+                <div class="auth-header">
+                    <h2>Registrasi Anggota Baru</h2>
+                    <p>Formulir pendaftaran untuk pengunjung umum (Aktor Tamu) yang ingin menjadi anggota SIMPUS-Mini.</p>
+                </div>
+
+                <form action="login.html" method="GET">
+                    <p>
+                        <label for="nama">Nama Lengkap : <span style="color: red;">*</span></label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" required>
+                    </p>
+
+                    <p>
+                        <label for="identitas">Nomor Identitas (NIK / NIM / NIS) : <span style="color: red;">*</span></label>
+                        <input type="text" id="identitas" name="identitas" placeholder="16 digit NIK atau Nomor Induk Mahasiswa/Siswa" required>
+                    </p>
+
+                    <p>
+                        <label for="email">Alamat Email : <span style="color: red;">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="nama@email.com" required>
+                    </p>
+
+                    <p>
+                        <label for="no_hp">Nomor HP / WhatsApp : <span style="color: red;">*</span></label>
+                        <input type="tel" id="no_hp" name="no_hp" placeholder="Contoh: 081234567890" required>
+                    </p>
+
+                    <p>
+                        <label for="jk">Jenis Kelamin :</label>
+                        <select id="jk" name="jk" required>
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="alamat">Alamat Lengkap Domisili :</label>
+                        <textarea id="alamat" name="alamat" rows="3" placeholder="Nama Jalan, RT/RW, Kelurahan, Kecamatan, Kota/Kabupaten"></textarea>
+                    </p>
+
+                    <p>
+                        <label for="password">Password Akun : <span style="color: red;">*</span></label>
+                        <input type="password" id="password" name="password" placeholder="Minimal 6 karakter" required>
+                    </p>
+
+                    <p>
+                        <label for="konfirmasi_password">Konfirmasi Password : <span style="color: red;">*</span></label>
+                        <input type="password" id="konfirmasi_password" name="konfirmasi_password" placeholder="Ulangi password" required>
+                    </p>
+
+                    <p style="margin-top: 1.5rem; display: flex; gap: 0.75rem;">
+                        <button type="submit" style="flex: 2;">[ Daftar Sekarang ]</button>
+                        <a href="index.html" class="btn btn-secondary" style="flex: 1; padding: 0.6rem 1rem; text-align: center;">[ Batal ]</a>
+                    </p>
+                </form>
+
+                <div class="auth-footer">
+                    <p>Sudah terdaftar sebagai anggota? <a href="login.html">Masuk di sini</a></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem; color: #888;">
+                        <a href="index.html">&larr; Kembali ke Beranda Tamu</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 5 (JavaScript DOM &amp; Event)</p>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+</body>
+</html>
