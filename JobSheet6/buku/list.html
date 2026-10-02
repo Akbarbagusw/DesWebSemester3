@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMPUS-Mini | Daftar Buku</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>SIMPUS-Mini</h1>
+        <button type="button" class="nav-toggle-label" aria-label="Buka menu" aria-expanded="false" aria-controls="main-nav">&#9776;</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html">Beranda</a></li>
+                <li><a href="list.html">Daftar Buku</a></li>
+                <li><a href="tambah.html">Tambah Buku</a></li>
+                <li><a href="../anggota/list.html">Daftar Anggota</a></li>
+                <li><a href="../anggota/tambah.html">Tambah Anggota</a></li>
+                <li><a href="../login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Daftar Buku</h2>
+            <div class="table-filter-wrap" style="display: flex; gap: 0.75rem; align-items: flex-end; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 240px;">
+                    <label for="book-filter">Cari judul buku</label>
+                    <input type="search" id="book-filter" class="table-filter" data-filter-column="0" placeholder="Masukkan judul buku...">
+                </div>
+                <button type="button" id="btn-reload" class="btn btn-primary" style="padding: 0.55rem 1rem; height: 38px;">Muat Ulang</button>
+            </div>
+            <p class="table-count" data-item-label="buku" aria-live="polite"></p>
+            <p id="loading-indicator" style="display:none;" aria-live="polite">Memuat data...</p>
+            <div class="table-responsive">
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Judul Buku</th>
+                            <th>Pengarang</th>
+                            <th>Kategori</th>
+                            <th>Tahun</th>
+                            <th>Stok</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 SIMPUS-Mini &mdash; Jobsheet 6 (Fetch API &amp; JSON)</p>
+    </footer>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/buku.js"></script>
+</body>
+</html>
