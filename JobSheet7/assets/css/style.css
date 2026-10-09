@@ -1,0 +1,463 @@
+/* ==========================================================================
+   1. RESET & BASE (Default Mobile)
+   ========================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #2b2b2b;
+    background-color: #f5f6f8;
+    line-height: 1.5;
+}
+
+a {
+    color: #2e7d32;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+    2. HEADER & NAVBAR (Mobile Default: Vertikal + JavaScript Toggle)
+   ========================================================================== */
+header {
+    background-color: #2e7d32;
+    color: #fff;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header h1 {
+    font-size: 1.3rem;
+    order: 1;
+}
+
+.nav-toggle-label {
+    display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #fff;
+    order: 2;
+    user-select: none;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    line-height: 1;
+}
+
+header nav {
+    display: block;
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0s linear 0.25s;
+}
+
+.nav-open {
+    max-height: 24rem;
+    opacity: 1;
+    visibility: visible;
+    transition: max-height 0.25s ease, opacity 0.2s ease, visibility 0s;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+header nav a {
+    color: #fff;
+    font-weight: 500;
+    display: block;
+    padding: 0.25rem 0;
+}
+
+/* ==========================================================================
+   3. KONTEN UTAMA & KARTU STATISTIK (Mobile Default: 1 Kolom)
+   ========================================================================== */
+main {
+    width: 100%;
+    margin: 1.25rem auto;
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+section h2 {
+    margin-bottom: 1rem;
+    color: #2e7d32;
+    font-size: 1.25rem;
+}
+
+main section:nth-of-type(2) {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+}
+
+main section:nth-of-type(2) article {
+    background-color: #eef4fa;
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+main section:nth-of-type(2) article h3 {
+    font-size: 0.95rem;
+    color: #55677a;
+    margin-bottom: 0.35rem;
+}
+
+main section:nth-of-type(2) article p {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+/* ==========================================================================
+   4. TABEL, BLOK KODE, FORM & FOOTER (Mobile Default)
+   ========================================================================== */
+
+.table-responsive,
+.code-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table-filter-wrap {
+    margin-bottom: 1rem;
+}
+
+.table-filter-wrap label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.table-count {
+    margin: -0.45rem 0 0.8rem;
+    color: #55677a;
+    font-size: 0.9rem;
+}
+
+#loading-indicator {
+    margin: 0.5rem 0 1rem;
+    font-style: italic;
+    color: #2e7d32;
+    font-weight: 500;
+}
+
+.table-filter {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    font: inherit;
+}
+
+.table-filter:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+.form-error {
+    display: block;
+    margin-top: 0.3rem;
+    color: #b42318;
+    font-size: 0.875rem;
+}
+
+pre {
+    background-color: #1e1e24;
+    color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: Consolas, Courier, monospace;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre;
+    border-left: 4px solid #2e7d32;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.65rem 0.75rem;
+    border-bottom: 1px solid #e2e6ea;
+    white-space: nowrap;
+}
+
+thead {
+    background-color: #2e7d32;
+    color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+tbody tr:hover {
+    background-color: #eef4fa;
+}
+
+td button, .btn {
+    display: inline-block;
+    padding: 0.35rem 0.65rem;
+    margin-right: 0.25rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    text-align: center;
+    font-family: inherit;
+    text-decoration: none;
+}
+
+.btn-edit      { background-color: #f0ad4e; color: #fff; }
+.btn-detail    { background-color: #5bc0de; color: #fff; }
+.btn-hapus     { background-color: #d9534f; color: #fff; }
+.btn-primary   { background-color: #2e7d32; color: #fff; }
+.btn-secondary { background-color: #6c757d; color: #fff; }
+
+/* Form di Mobile Default */
+form p {
+    margin-bottom: 1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+    color: #444;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+    padding: 0.55rem 0.7rem;
+    border: 1px solid #cdd4da;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.15);
+}
+
+form button[type="submit"] {
+    background-color: #2e7d32;
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    font-family: inherit;
+    font-weight: 600;
+}
+
+form button[type="submit"]:hover {
+    background-color: #1b4e20;
+}
+
+/* ==========================================================================
+    5. AUTH & CARD UTILITIES (Jobsheet 5)
+   ========================================================================== */
+.auth-wrapper {
+    max-width: 450px;
+    margin: 2rem auto;
+}
+
+.auth-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-top: 4px solid #2e7d32;
+}
+
+.auth-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-header h2 {
+    color: #2e7d32;
+    margin-bottom: 0.35rem;
+}
+
+.auth-header p {
+    color: #666;
+    font-size: 0.92rem;
+}
+
+.auth-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.25em 0.55em;
+    font-size: 78%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 0.25rem;
+}
+
+.badge-success { background-color: #2e7d32; color: #fff; }
+.badge-danger  { background-color: #d9534f; color: #fff; }
+.badge-warning { background-color: #f0ad4e; color: #212529; }
+.badge-info    { background-color: #0288d1; color: #fff; }
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #7a8794;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. PROGRESSIVE ENHANCEMENT BREAKPOINTS (min-width)
+   ========================================================================== */
+
+@media (min-width: 600px) {
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    form button[type="submit"] {
+        width: auto;
+    }
+
+    .form-row-2col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header nav {
+        display: block;
+        width: auto;
+        margin-top: 0;
+        max-height: none;
+        opacity: 1;
+        overflow: visible;
+        visibility: visible;
+        transition: none;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 1.25rem;
+    }
+
+    main {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 0 1.5rem;
+    }
+
+    main section:nth-of-type(2) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+    }
+
+    form input,
+    form select {
+        max-width: 400px;
+    }
+
+    .auth-card form input,
+    .auth-card form select {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 1400px) {
+    main {
+        max-width: 1320px;
+    }
+
+    main section:nth-of-type(2) {
+        gap: 1.5rem;
+    }
+}
+
+/* ===== Flash Message (Jobsheet 7 Bab 6) ===== */
+.flash {
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.flash-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.flash-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
